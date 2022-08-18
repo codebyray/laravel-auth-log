@@ -25,7 +25,7 @@ return [
             'location' => true,
 
             // The Notification class to send
-            'template' => \Codebyray\LaravelAuthenticationLog\Notifications\NewDevice::class,
+            'template' => \Codebyray\LaravelAuthLog\Notifications\NewDevice::class,
         ],
         'failed-login' => [
             // Send the FailedLogin notification
@@ -35,7 +35,7 @@ return [
             'location' => true,
 
             // The Notification class to send
-            'template' => \Codebyray\LaravelAuthenticationLog\Notifications\FailedLogin::class,
+            'template' => \Codebyray\LaravelAuthLog\Notifications\FailedLogin::class,
         ],
     ],
 

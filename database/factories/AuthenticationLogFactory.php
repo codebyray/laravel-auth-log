@@ -1,9 +1,9 @@
 <?php
 
-namespace Codebyray\LaravelAuthenticationLog\Database\Factories;
+namespace Codebyray\LaravelAuthLog\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Codebyray\LaravelAuthenticationLog\Models\AuthenticationLog;
+use Codebyray\LaravelAuthLog\Models\AuthenticationLog;
 
 class AuthenticationLogFactory extends Factory
 {
