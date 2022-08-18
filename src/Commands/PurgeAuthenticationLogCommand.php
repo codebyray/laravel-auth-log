@@ -1,9 +1,9 @@
 <?php
 
-namespace Codebyray\LaravelAuthenticationLog\Commands;
+namespace Codebyray\LaravelAuthLog\Commands;
 
 use Illuminate\Console\Command;
-use Codebyray\LaravelAuthenticationLog\Models\AuthenticationLog;
+use Codebyray\LaravelAuthLog\Models\AuthenticationLog;
 
 class PurgeAuthenticationLogCommand extends Command
 {

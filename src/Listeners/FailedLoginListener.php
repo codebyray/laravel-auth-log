@@ -1,10 +1,10 @@
 <?php
 
-namespace Codebyray\LaravelAuthenticationLog\Listeners;
+namespace Codebyray\LaravelAuthLog\Listeners;
 
 use Illuminate\Auth\Events\Failed;
 use Illuminate\Http\Request;
-use Codebyray\LaravelAuthenticationLog\Notifications\FailedLogin;
+use Codebyray\LaravelAuthLog\Notifications\FailedLogin;
 
 class FailedLoginListener
 {

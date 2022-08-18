@@ -1,10 +1,10 @@
 <?php
 
-namespace Rappasoft\LaravelAuthenticationLog\Listeners;
+namespace Codebyray\LaravelAuthLog\Listeners;
 
 use Illuminate\Auth\Events\OtherDeviceLogout;
 use Illuminate\Http\Request;
-use Rappasoft\LaravelAuthenticationLog\Models\AuthenticationLog;
+use Codebyray\LaravelAuthLog\Models\AuthenticationLog;
 
 class OtherDeviceLogoutListener
 {

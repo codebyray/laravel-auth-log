@@ -1,8 +1,8 @@
 <?php
 
-namespace Codebyray\LaravelAuthenticationLog\Traits;
+namespace Codebyray\LaravelAuthLog\Traits;
 
-use Codebyray\LaravelAuthenticationLog\Models\AuthenticationLog;
+use Codebyray\LaravelAuthLog\Models\AuthenticationLog;
 
 trait AuthenticationLoggable
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Codebyray\LaravelAuthenticationLog\Notifications;
+namespace Codebyray\LaravelAuthLog\Notifications;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -8,7 +8,7 @@ use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Messages\NexmoMessage;
 use Illuminate\Notifications\Messages\SlackMessage;
 use Illuminate\Notifications\Notification;
-use Codebyray\LaravelAuthenticationLog\Models\AuthenticationLog;
+use Codebyray\LaravelAuthLog\Models\AuthenticationLog;
 
 class FailedLogin extends Notification implements ShouldQueue
 {

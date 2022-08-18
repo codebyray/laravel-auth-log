@@ -1,11 +1,11 @@
 <?php
 
-namespace Rappasoft\LaravelAuthenticationLog\Listeners;
+namespace Codebyray\LaravelAuthLog\Listeners;
 
 use Illuminate\Auth\Events\Login;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
-use Rappasoft\LaravelAuthenticationLog\Notifications\NewDevice;
+use Codebyray\LaravelAuthLog\Notifications\NewDevice;
 
 class LoginListener
 {

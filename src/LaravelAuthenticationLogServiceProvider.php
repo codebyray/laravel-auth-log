@@ -1,21 +1,21 @@
 <?php
 
-namespace Codebyray\LaravelAuthenticationLog;
+namespace Codebyray\LaravelAuthLog;
 
 use Illuminate\Auth\Events\Failed;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Auth\Events\Logout;
 use Illuminate\Auth\Events\OtherDeviceLogout;
 use Illuminate\Contracts\Events\Dispatcher;
-use Codebyray\LaravelAuthenticationLog\Commands\PurgeAuthenticationLogCommand;
-use Codebyray\LaravelAuthenticationLog\Listeners\FailedLoginListener;
-use Codebyray\LaravelAuthenticationLog\Listeners\LoginListener;
-use Codebyray\LaravelAuthenticationLog\Listeners\LogoutListener;
-use Codebyray\LaravelAuthenticationLog\Listeners\OtherDeviceLogoutListener;
+use Codebyray\LaravelAuthLog\Commands\PurgeAuthenticationLogCommand;
+use Codebyray\LaravelAuthLog\Listeners\FailedLoginListener;
+use Codebyray\LaravelAuthLog\Listeners\LoginListener;
+use Codebyray\LaravelAuthLog\Listeners\LogoutListener;
+use Codebyray\LaravelAuthLog\Listeners\OtherDeviceLogoutListener;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class LaravelAuthenticationLogServiceProvider extends PackageServiceProvider
+class LaravelAuthLogServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {

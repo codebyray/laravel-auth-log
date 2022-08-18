@@ -1,12 +1,12 @@
 {
-    "name": "codebyray/laravel-authentication-log",
+    "name": "codebyray/laravel-auth-log",
     "description": "Log user authentication details and send new device notifications.",
     "keywords": [
         "codebyray",
         "laravel",
-        "laravel-authentication-log"
+        "laravel-auth-log"
     ],
-    "homepage": "https://github.com/codebyray/laravel-authentication-log",
+    "homepage": "https://github.com/codebyray/laravel-auth-log",
     "license": "MIT",
     "authors": [
         {
@@ -30,13 +30,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Codebyray\\LaravelAuthenticationLog\\": "src",
-            "Codebyray\\LaravelAuthenticationLog\\Database\\Factories\\": "database/factories"
+            "Codebyray\\LaravelAuthLog\\": "src",
+            "Codebyray\\LaravelAuthLog\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Codebyray\\LaravelAuthenticationLog\\Tests\\": "tests"
+            "Codebyray\\LaravelAuthLog\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -52,7 +52,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Codebyray\\LaravelAuthenticationLog\\LaravelAuthenticationLogServiceProvider"
+                "Codebyray\\LaravelAuthLog\\LaravelAuthLogServiceProvider"
             ]
         }
     },
