@@ -7,7 +7,7 @@ use Codebyray\LaravelAuthLog\Models\AuthenticationLog;
 
 class PurgeAuthenticationLogCommand extends Command
 {
-    public $signature = 'authentication-log:purge';
+    public $signature = 'auth-log:purge';
 
     public $description = 'Purge all authentication logs older than the configurable amount of days.';
 
@@ -15,7 +15,7 @@ class PurgeAuthenticationLogCommand extends Command
     {
         $this->comment('Clearing authentication log...');
 
-        $deleted = AuthenticationLog::where('login_at', '<', now()->subDays(config('authentication-log.purge'))->format('Y-m-d H:i:s'))->delete();
+        $deleted = AuthenticationLog::where('login_at', '<', now()->subDays(config('auth-log.purge'))->format('Y-m-d H:i:s'))->delete();
 
         $this->info($deleted . ' authentication logs cleared.');
     }
