@@ -9,7 +9,7 @@ class AuthenticationLog extends Model
 {
     public $timestamps = false;
 
-    protected $table = 'authentication_log';
+    protected $table = 'auth_log';
 
     protected $fillable = [
         'ip_address',
@@ -35,7 +35,7 @@ class AuthenticationLog extends Model
     public function __construct(array $attributes = [])
     {
         if (! isset($this->connection)) {
-            $this->setConnection(config('authentication-log.db_connection'));
+            $this->setConnection(config('auth-log.db_connection'));
         }
 
         parent::__construct($attributes);
@@ -43,7 +43,7 @@ class AuthenticationLog extends Model
 
     public function getTable()
     {
-        return config('authentication-log.table_name', parent::getTable());
+        return config('auth-log.table_name', parent::getTable());
     }
 
     public function authenticatable(): MorphTo
