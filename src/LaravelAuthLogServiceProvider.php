@@ -20,7 +20,7 @@ class LaravelAuthLogServiceProvider extends PackageServiceProvider
     public function configurePackage(Package $package): void
     {
         $package
-            ->name('laravel-authentication-log')
+            ->name('laravel-auth-log')
             ->hasConfigFile()
             ->hasTranslations()
             ->hasViews()
