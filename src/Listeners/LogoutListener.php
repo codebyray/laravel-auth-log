@@ -17,7 +17,7 @@ class LogoutListener
 
     public function handle($event): void
     {
-        $listener = config('authentication-log.events.logout', Logout::class);
+        $listener = config('auth-log.events.logout', Logout::class);
         if (! $event instanceof $listener) {
             return;
         }

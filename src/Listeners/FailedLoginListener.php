@@ -17,7 +17,7 @@ class FailedLoginListener
 
     public function handle($event): void
     {
-        $listener = config('authentication-log.events.failed', Failed::class);
+        $listener = config('auth-log.events.failed', Failed::class);
         if (! $event instanceof $listener) {
             return;
         }
@@ -28,11 +28,11 @@ class FailedLoginListener
                 'user_agent' => $this->request->userAgent(),
                 'login_at' => now(),
                 'login_successful' => false,
-                'location' => config('authentication-log.notifications.new-device.location') ? optional(geoip()->getLocation($ip))->toArray() : null,
+                'location' => config('auth-log.notifications.new-device.location') ? optional(geoip()->getLocation($ip))->toArray() : null,
             ]);
 
-            if (config('authentication-log.notifications.failed-login.enabled')) {
-                $failedLogin = config('authentication-log.notifications.failed-login.template') ?? FailedLogin::class;
+            if (config('auth-log.notifications.failed-login.enabled')) {
+                $failedLogin = config('auth-log.notifications.failed-login.template') ?? FailedLogin::class;
                 $event->user->notify(new $failedLogin($log));
             }
         }

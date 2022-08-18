@@ -18,7 +18,7 @@ class LoginListener
 
     public function handle($event): void
     {
-        $listener = config('authentication-log.events.login', Login::class);
+        $listener = config('auth-log.events.login', Login::class);
         if (! $event instanceof $listener) {
             return;
         }
@@ -35,11 +35,11 @@ class LoginListener
                 'user_agent' => $userAgent,
                 'login_at' => now(),
                 'login_successful' => true,
-                'location' => config('authentication-log.notifications.new-device.location') ? optional(geoip()->getLocation($ip))->toArray() : null,
+                'location' => config('auth-log.notifications.new-device.location') ? optional(geoip()->getLocation($ip))->toArray() : null,
             ]);
 
-            if (! $known && ! $newUser && config('authentication-log.notifications.new-device.enabled')) {
-                $newDevice = config('authentication-log.notifications.new-device.template') ?? NewDevice::class;
+            if (! $known && ! $newUser && config('auth-log.notifications.new-device.enabled')) {
+                $newDevice = config('auth-log.notifications.new-device.template') ?? NewDevice::class;
                 $user->notify(new $newDevice($log));
             }
         }
