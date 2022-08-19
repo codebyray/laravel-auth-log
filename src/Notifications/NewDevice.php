@@ -30,7 +30,7 @@ class NewDevice extends Notification implements ShouldQueue
     {
         return (new MailMessage())
             ->subject(__('Your :app account logged in from a new device.', ['app' => config('app.name')]))
-            ->markdown('authentication-log::emails.new', [
+            ->markdown('auth-log::emails.new', [
                 'account' => $notifiable,
                 'time' => $this->authenticationLog->login_at,
                 'ipAddress' => $this->authenticationLog->ip_address,
