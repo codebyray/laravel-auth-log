@@ -1,5 +1,5 @@
 {
-    "A failed login to your account": "A failed login to your account",
+    "There has been a failed login attempt.": "[:app] There has been a failed login attempt.",
     "Account:": "Account:",
     "Browser:": "Browser:",
     "Hello!": "Hello!",
@@ -11,5 +11,5 @@
     "Time:": "Time:",
     "Unknown City": "Unknown City",
     "Unknown State": "Unknown State",
-    "Your :app account logged in from a new device.": "Your :app account logged in from a new device."
+    "[:app] Your account logged in from a new device.": "[:app] Your account logged in from a new device."
 }

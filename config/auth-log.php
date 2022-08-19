@@ -19,20 +19,20 @@ return [
     'notifications' => [
         'new-device' => [
             // Send the NewDevice notification
-            'enabled' => env('NEW_DEVICE_NOTIFICATION', true),
+            'enabled' => env('AUTH_LOG_NEW_DEVICE_NOTIFICATION', true),
 
             // Use torann/geoip to attempt to get a location
-            'location' => true,
+            'location' => env('AUTH_LOG_GET_LOCATION', true),
 
             // The Notification class to send
             'template' => \Codebyray\LaravelAuthLog\Notifications\NewDevice::class,
         ],
         'failed-login' => [
             // Send the FailedLogin notification
-            'enabled' => env('FAILED_LOGIN_NOTIFICATION', false),
+            'enabled' => env('AUTH_LOG_FAILED_LOGIN_NOTIFICATION', false),
 
             // Use torann/geoip to attempt to get a location
-            'location' => true,
+            'location' => env('AUTH_LOG_GET_LOCATION', true),
 
             // The Notification class to send
             'template' => \Codebyray\LaravelAuthLog\Notifications\FailedLogin::class,

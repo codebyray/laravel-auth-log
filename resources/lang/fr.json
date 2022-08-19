@@ -1,5 +1,5 @@
 {
-    "A failed login to your account": "Échec de la connexion à votre compte",
+    "There has been a failed login attempt.": "[:app] Une tentative de connexion a échoué.",
     "Account:": "Compte :",
     "Browser:": "Navigateur :",
     "Hello!": "Bonjour,",
@@ -11,5 +11,5 @@
     "Time:": "Heure :",
     "Unknown City": "Ville inconnue",
     "Unknown State": "État inconnu",
-    "Your :app account logged in from a new device.": "Connexion à votre compte sur :app depuis un nouvel appareil."
+    "[:app] Votre compte s'est connecté depuis un nouvel appareil.": "[:app] Votre compte s'est connecté depuis un nouvel appareil."
 }

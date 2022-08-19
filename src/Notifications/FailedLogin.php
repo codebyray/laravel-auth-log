@@ -29,7 +29,7 @@ class FailedLogin extends Notification implements ShouldQueue
     public function toMail($notifiable)
     {
         return (new MailMessage())
-            ->subject(__('A failed login to your account'))
+            ->subject(__('[:app] There has been a failed login attempt.', ['app' => config('app.name')]))
             ->markdown('auth-log::emails.failed', [
                 'account' => $notifiable,
                 'time' => $this->authenticationLog->login_at,
